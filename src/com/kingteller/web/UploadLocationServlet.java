@@ -41,8 +41,10 @@ public class UploadLocationServlet extends HttpServlet {
 		String jsonStr ;
 		if (uploadSuccess) {
 			jsonStr = gson.toJson("yes");
+			System.out.print("上传成功！上传位置->纬度:" + lat + " 经度:" + lng);
 		}else {
 			jsonStr = gson.toJson("no");
+			System.out.print("上传失败！上传位置->纬度:" + lat + " 经度:" + lng);
 		}
 		PrintWriter out = null;
 		try {
